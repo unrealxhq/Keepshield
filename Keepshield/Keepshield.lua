@@ -21,7 +21,12 @@ windower.register_event('addon command', function (command,...)
 	elseif command == 'toggle' then
 		enabled = not enabled
 		log('Enabled set to: '..(enabled and 'true' or 'false'))
-		local cmd = args[1]     
+		local cmd = args[1]  
+	elseif command == 'help' then
+		enabled = false
+		log('Command: "on"  turns the addon on.')
+		log('Command: "off"  turns the addon off.')
+		log('Command: "toggle"  switches the addon between on and off depending on the current status.')
 	else
 		log('Error: Unknown command')
 	end
