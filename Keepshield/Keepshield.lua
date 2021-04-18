@@ -33,7 +33,7 @@ windower.register_event('addon command', function (command,...)
 end)
 
 windower.register_event('prerender',function()
-    if os.clock()-nextPing > 0.2 then
+    if os.clock()-nextPing > 0.15 then
     local player = windower.ffxi.get_player()
     local get_items = windower.ffxi.get_items()
 	if enabled then
